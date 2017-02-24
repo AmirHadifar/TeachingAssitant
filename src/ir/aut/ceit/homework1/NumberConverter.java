@@ -24,36 +24,13 @@ public class NumberConverter {
     private static final String[] TEN_TO_NINETEEN = {"", "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "};
     private static final String[] TWENTY_TO_NINETY = {"", "Twenty ", "Thirty ", "Forty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "};
 
-    public static void main(String[] args) {
-        testQuestion2();
-    }
-
-    private static void testQuestion2() {
-        System.out.println(spellingInteger(0));
-        System.out.println(spellingInteger(1));
-        System.out.println(spellingInteger(9));
-        System.out.println(spellingInteger(13));
-        System.out.println(spellingInteger(67));
-        System.out.println(spellingInteger(99));
-        System.out.println(spellingInteger(100));
-        System.out.println(spellingInteger(101));
-        System.out.println(spellingInteger(781));
-        System.out.println(spellingInteger(999));
-        System.out.println(spellingInteger(1001));
-        System.out.println(spellingInteger(1011));
-        System.out.println(spellingInteger(1111));
-        System.out.println(spellingInteger(1301));
-        System.out.println(spellingInteger(1939));
-        System.out.println(spellingInteger(3918));
-        System.out.println(spellingInteger(9999));
-    }
-
     /**
      * Spelling integer, convert integer to string
+     *
      * @param num input number
      * @return equivalent string
      */
-    private static String spellingInteger(int num) {
+    public static String spellingInteger(int num) {
         String number = "";
         number += (num / 1000) > 0 ? ONE_TO_NINE[num / 1000] + THOUSAND : "";
         number += ((num / 100) % 10) > 0 ? ONE_TO_NINE[(num / 100) % 10] + HUNDRED : "";
