@@ -1,5 +1,7 @@
 package ir.aut.ceit.homework2;
 
+import java.math.BigInteger;
+
 /**
  * Copyright 2017 Amir Hadifar.
  * <p>
@@ -35,6 +37,13 @@ public class Test {
         System.out.println(complexNumber1.getReal());
         System.out.println(complexNumber4.sub(complexNumber2));
         System.out.println(ComplexNumber.getCount());
+        complexNumber3.setImage(3.3);
+        complexNumber3.setReal(9.1);
+        System.out.println(complexNumber3);
+        System.out.println(complexNumber4.mul(complexNumber1));
+
+
+        BigInteger bigInteger = new BigInteger("1903291");
 
     }
 }

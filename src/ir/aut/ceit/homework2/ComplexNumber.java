@@ -16,7 +16,9 @@ package ir.aut.ceit.homework2;
  * limitations under the License.
  */
 public class ComplexNumber {
+
     private static int count = 0;
+
     private double real;
     private double image;
 
@@ -47,11 +49,11 @@ public class ComplexNumber {
     }
 
     public ComplexNumber add(ComplexNumber complexNumber) {
-        return new ComplexNumber(this.real + complexNumber.getReal(), this.image + complexNumber.getImage());
+        return new ComplexNumber(this.real + complexNumber.real, this.image + complexNumber.image);
     }
 
     public ComplexNumber sub(ComplexNumber complexNumber) {
-        return new ComplexNumber(this.real - complexNumber.getReal(), this.image - complexNumber.getImage());
+        return new ComplexNumber(this.real - complexNumber.real, this.image - complexNumber.image);
     }
 
     public ComplexNumber div(ComplexNumber complexNumber) {
@@ -60,8 +62,9 @@ public class ComplexNumber {
     }
 
     public ComplexNumber mul(ComplexNumber complexNumber) {
-        // todo forget multiply formula
-        return new ComplexNumber();
+        double real = this.real * complexNumber.real - this.image * complexNumber.getImage();
+        double imaginary = this.real * complexNumber.image + this.image * complexNumber.real;
+        return new ComplexNumber(real, imaginary);
     }
 
     public static int getCount() {
